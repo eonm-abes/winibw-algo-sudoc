@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Ce script permet de récuper depuis WinIBW les rapports de chargement de Theses.fr (AlgoSudoc).",
   "scripts": {
-    "build": "babel src -d dist; eslint --fix dist/*.js",
+    "build": "babel src -d dist && eslint --fix dist/*.js",
     "pack": "webpack --mode=production  --config webpack.config.js"
   },
   "author": "eon",
