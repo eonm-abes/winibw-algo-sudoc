@@ -47,7 +47,7 @@ Dans l'onglet `Commandes`➀ :
 
 - Séléctionnez sur le paneau `Catégorie`  l'entrée `Standard Fonctions`➁
 - Sélectionnez dans le paneau `Commandes` le script `AlgoSudoc`➂
-- Glissez déposez le script séléctioné sur l'une des barres de menu de winIBW
+- Glissez déposez le script séléctioné sur l'une des barres de menu de WinIBW
 
 ## Utilisation
 
