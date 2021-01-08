@@ -55,6 +55,8 @@ Le script peut être utilisé depuis une notice ou une liste de notices. Lorsque
 
 ## Développement
 
+Vous devez disposer d'un environement de développement [Node.js](https://nodejs.org/en/download/).
+
 ```
 npm install
 npm run build
