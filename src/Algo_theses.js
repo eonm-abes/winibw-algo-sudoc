@@ -1,8 +1,8 @@
-// description: Ce script permet de récuperer avec AlgoSudoc les rapports de chargement de données de Theses.fr depuis WinIBW.
+// description: Ce script permet de récuperer avec AlgoTheses les rapports de chargement de données de Theses.fr depuis WinIBW.
 // author : Mathis EON
 // email: eon@abes.fr
 
-const algo_sudoc_base_url = "https://www.theses.fr/AlgoSudoc";
+const algo_theses_base_url = "https://www.theses.fr/AlgoSudoc";
 
 const winIBWMessageFormat = {
   error: 1,
@@ -10,26 +10,26 @@ const winIBWMessageFormat = {
   notification: 3,
 };
 
-function AlgoSudoc() {
+function AlgoTheses() {
   let ppn = application.activeWindow.getVariable("P3GPP");
 
   if (ppn) {
     let url = urlBuilder("ppn", ppn);
 
     application.activeWindow.showMessage(
-      `Récupération du rapport d'AlgoSudoc depuis : ${url}`,
+      `Récupération du rapport d'AlgoThèses depuis : ${url}`,
       winIBWMessageFormat.notification
     );
 
     application.shellExecute(url, 5, "open", "");
   } else {
     application.activeWindow.showMessage(
-      `Impossible de récupérer le rapport d'AlgoSudoc depuis cet écran`,
+      `Impossible de récupérer le rapport d'AlgoThèses depuis cet écran`,
       winIBWMessageFormat.warning
     );
   }
 }
 
 function urlBuilder(param_name, param_value) {
-  return `${algo_sudoc_base_url}?${param_name}=${param_value}`;
+  return `${algo_theses_base_url}?${param_name}=${param_value}`;
 }

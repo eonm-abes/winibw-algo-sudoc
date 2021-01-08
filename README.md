@@ -1,29 +1,29 @@
 <div align="center">
 
-# WinIBW AlgoSudoc
+# WinIBW AlgoThèses
 
-![Build](https://github.com/eonm-abes/winibw-algo-sudoc/workflows/Build/badge.svg)
-[![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20lastest%20build-AlgoSudoc.js-yellow)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
-[![GitHub release](https://img.shields.io/github/release/eonm-abes/winibw-algo-sudoc.svg)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest)
-[![Contribution Welcome](https://img.shields.io/badge/contribution-welcome-green.svg)](https://github.com/eonm-abes/winibw-algo-sudoc/pulls)
+![Build](https://github.com/eonm-abes/winibw-algo-theses/workflows/Build/badge.svg)
+[![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20lastest%20build-AlgoTheses.js-yellow)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest/download/Algo_theses.js)
+[![GitHub release](https://img.shields.io/github/release/eonm-abes/winibw-algo-theses.svg)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest)
+[![Contribution Welcome](https://img.shields.io/badge/contribution-welcome-green.svg)](https://github.com/eonm-abes/winibw-algo-theses/pulls)
 
 </div>
 
-Ce script permet de récuperer grâce à [AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html) les rapports de chargement de données de [Theses.fr](http://www.theses.fr/) depuis WinIBW.
+Ce script permet de récuperer grâce à [AlgoThèses](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html) les rapports de chargement de données de [Theses.fr](http://www.theses.fr/) depuis WinIBW.
 
 ## Installation
 
 > __⚠️ Avant toute modification pensez à conserver une copie fonctionnelle du fichier `C:\oclcpica\WinIBW30\defaults\pref\setup.js`__
 
-1- [Téléchargez la dernière version d'AlgoSudoc](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
+1- [Téléchargez la dernière version d'AlgoThèses](https://github.com/eonm-abes/winibw-algo-theses/releases/latest/download/Algo_theses.js)
 
 
-2- Le fichier `Algo_sudoc.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\chrome\ibw\scripts\`.<sup id="a1">[1](#f1)</sup> 
+2- Le fichier `Algo_theses.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\chrome\ibw\scripts\`.<sup id="a1">[1](#f1)</sup> 
 
 3- La ligne suivante doit être rajoutée au fichier `C:\oclcpica\WinIBW30\defaults\pref\setup.js` (à la suite des lignes contenant `ibw.standardScripts.script.XX`) :
 
 ```js
-pref("ibw.standardScripts.script.AlgoSudoc", "resource:/scripts/Algo_sudoc.js");
+pref("ibw.standardScripts.script.AlgoTheses", "resource:/scripts/Algo_theses.js");
 ```
 
 Le script est à présent installé, WinIBW doit être redémarré pour que l'installation devienne effective.
@@ -47,12 +47,12 @@ Depuis la barre de menu : `Options` ↪ `Personnaliser` (Ctrl+Shift+P)
 Dans l'onglet `Commandes`➀ :
 
 - Sélectionnez dans le panneau `Catégories`  l'entrée `Standard Fonctions`➁
-- Sélectionnez dans le panneau `Commandes` le script `AlgoSudoc`➂
+- Sélectionnez dans le panneau `Commandes` le script `AlgoTheses`➂
 - Glissez déposez le script sélectioné sur l'une des barres de menu de WinIBW
 
 ## Utilisation
 
-Le script peut être utilisé depuis une notice ou une liste de notices. Lorsque le script est utilisé sur une liste de résultats seule la notice sélectionnée est analysée par AlgoSudoc.
+Le script peut être utilisé depuis une notice ou une liste de notices. Lorsque le script est utilisé sur une liste de résultats seule la notice sélectionnée est analysée par AlgoTheses.
 
 ## Développement
 
@@ -69,7 +69,7 @@ Le contenu du dossier `dist/` est généré automatiquement, il ne doit pas êtr
 
 ## Références
 
-[Documentation d'AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html)<br>[Documentation des scripts WinIBW](http://documentation.abes.fr/sudoc/manuels/logiciel_winibw/scripts/index.html)
+[Documentation d'AlgoThèses](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html)<br>[Documentation des scripts WinIBW](http://documentation.abes.fr/sudoc/manuels/logiciel_winibw/scripts/index.html)
 
 Développement :
 
@@ -77,4 +77,4 @@ Développement :
 
 ---
 
-<span id="f1">1</span> Si vous souhaitez conserver un dossier `scripts` propre qui ne contient que les scripts fournis par OCLC et par l'ABES, vous pouvez lier fichier Algo_sudoc.js au lieu de le copier. [↩](#a1)
+<span id="f1">1</span> Si vous souhaitez conserver un dossier `scripts` propre qui ne contient que les scripts fournis par OCLC et par l'ABES, vous pouvez lier fichier Algo_theses.js au lieu de le copier. [↩](#a1)
