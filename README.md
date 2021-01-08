@@ -70,4 +70,6 @@ Le contenu du dossier `dist/` est généré automatiquement, il ne doit pas êtr
 
 [Documentation d'AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html)<br>[Documentation des scripts WinIBW](http://documentation.abes.fr/sudoc/manuels/logiciel_winibw/scripts/index.html)
 
+<small><Développement :</small>
+
 [Scripting in WinIBW: Getting started](https://www.zeitschriftendatenbank.de/fileadmin/user_upload/ZDB/pdf/winibw/Scripting_in_WinIBW3_V_1_17.pdf)
