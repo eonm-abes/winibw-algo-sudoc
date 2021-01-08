@@ -8,7 +8,7 @@
 
 </div>
 
-Ce script permet de récuperer grâce à [AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html) les rapports de chargement de données de Theses.fr depuis WinIBW.
+Ce script permet de récuperer grâce à [AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html) les rapports de chargement de données de [Theses.fr](http://www.theses.fr/) depuis WinIBW.
 
 ## Installation
 
