@@ -3,8 +3,9 @@
 # WinIBW AlgoSudoc
 
 ![Build](https://github.com/eonm-abes/winibw-algo-sudoc/workflows/Build/badge.svg)
-[![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20Lastest%20Build-AlgoSudoc.js-yellow)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
-
+[![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20lastest%20build-AlgoSudoc.js-yellow)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
+[![GitHub release](https://img.shields.io/github/release/eonm-abes/winibw-algo-sudoc.svg)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest)
+[![Contribution Welcome](https://img.shields.io/badge/contribution-welcome-green.svg)](https://github.com/eonm-abes/winibw-algo-sudoc/pulls)
 
 </div>
 
