@@ -22,7 +22,7 @@ Ce script permet de récuperer grâce à [AlgoSudoc](http://documentation.abes.f
 3- La ligne suivante doit être rajoutée au fichier `C:\oclcpica\WinIBW30\defaults\pref\setup.js` (à la suite des lignes contenant `ibw.standardScripts.script.XX`) :
 
 ```js
-pref("ibw.standardScripts.script.Algosudoc", "resource:/scripts/Algo_sudoc.js");
+pref("ibw.standardScripts.script.AlgoSudoc", "resource:/scripts/Algo_sudoc.js");
 ```
 
 Le script est à présent installé, WinIBW doit être redémarré pour que l'installation devienne effective.
