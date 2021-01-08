@@ -18,7 +18,7 @@ Ce script permet de récuperer grâce à [AlgoSudoc](http://documentation.abes.f
 1- [Téléchargez la dernière version d'AlgoSudoc](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
 
 
-2- Le fichier `Algo_sudoc.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\chrome\ibw\scripts\`
+2- Le fichier `Algo_sudoc.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\chrome\ibw\scripts\`.<sup id="a1">[1](#f1)</sup> 
 
 3- La ligne suivante doit être rajoutée au fichier `C:\oclcpica\WinIBW30\defaults\pref\setup.js` (à la suite des lignes contenant `ibw.standardScripts.script.XX`) :
 
@@ -67,12 +67,14 @@ Le script devant être installé se trouve dans le dossier `dist/`.
 
 Le contenu du dossier `dist/` est généré automatiquement, il ne doit pas être édité à la main.
 
----
-
 ## Références
 
 [Documentation d'AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html)<br>[Documentation des scripts WinIBW](http://documentation.abes.fr/sudoc/manuels/logiciel_winibw/scripts/index.html)
 
-<small>Développement :</small>
+Développement :
 
 [Scripting in WinIBW: Getting started](https://www.zeitschriftendatenbank.de/fileadmin/user_upload/ZDB/pdf/winibw/Scripting_in_WinIBW3_V_1_17.pdf)
+
+---
+
+<span id="f1">1</span> Si vous souhaitez conserver un dossier `scripts` propre qui ne contient que les scripts fournis par OCLC et par l'ABES, vous pouvez lier fichier Algo_sudoc.js au lieu de le copier. [↩](#a1)
