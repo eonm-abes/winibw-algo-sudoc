@@ -1,4 +1,4 @@
-// description: Ce script permet de récuper avec AlgoSudoc les rapports de chargement de données de Theses.fr depuis WinIBW.
+// description: Ce script permet de récuperer avec AlgoSudoc les rapports de chargement de données de Theses.fr depuis WinIBW.
 // author : Mathis EON
 // email: eon@abes.fr
 
