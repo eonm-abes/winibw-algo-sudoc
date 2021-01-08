@@ -2,6 +2,9 @@
 
 # WinIBW AlgoSudoc
 
+![Build](https://github.com/eonm-abes/winibw-algo-sudoc/workflows/Node.js%20CI/badge.svg)
+![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20Lastest%20Build-AlgoSudoc.js-yellow)
+
 </div>
 
 Ce script permet de récuper grâce à [AlgoSudoc](http://documentation.abes.fr/sudoc/manuels/controle_bibliographique/rapports_chargement_theses_fr/index.html) les rapports de chargement de données de Theses.fr depuis WinIBW.
@@ -31,7 +34,7 @@ Le script est à présent installé, WinIBW doit être redémarré pour que l'in
 
 </div>
 
-Depuis la barre de menu : Options -> Personnaliser (Ctrl+Shift+P) dans l'onglet « Commandes ».
+Depuis la barre de menu : Options ↪ Personnaliser (Ctrl+Shift+P) dans l'onglet « Commandes ».
 
 <div align="center">
 
