@@ -1,0 +1,23 @@
+{
+  "name": "winibw-algo-sudoc",
+  "version": "0.1.0",
+  "description": "Ce script permet de récuper depuis WinIBW les rapports de chargement de Theses.fr (AlgoSudoc).",
+  "scripts": {
+    "build": "babel src -d dist; eslint --fix dist/*.js",
+    "pack": "webpack --mode=production  --config webpack.config.js"
+  },
+  "author": "eon",
+  "license": "GNU/GPL",
+  "dependencies": {
+    "@babel/cli": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.17.0"
+  }
+}

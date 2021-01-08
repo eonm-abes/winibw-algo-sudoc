@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 10
+    },
+    "rules": {
+        "no-unused-vars": ["error", { "varsIgnorePattern": "AlgoSudoc" }]
+    },
+    "globals": {
+        "application": "readonly"
+    }
+    
+}
