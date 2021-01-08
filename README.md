@@ -35,7 +35,7 @@ Le script est à présent installé, WinIBW doit être redémarré pour que l'in
 
 </div>
 
-Depuis la barre de menu : Options ↪ Personnaliser (Ctrl+Shift+P) dans l'onglet « Commandes ».
+Depuis la barre de menu : Options ↪ Personnaliser (Ctrl+Shift+P)
 
 <div align="center">
 
@@ -43,8 +43,10 @@ Depuis la barre de menu : Options ↪ Personnaliser (Ctrl+Shift+P) dans l'onglet
 
 </div>
 
-- Séléctionnez sur le paneau `Catégorie`  l'entrée `Standard Fonctions`
-- Sélectionnez dans le paneau `Commandes` le script `AlgoSudoc`
+Dans l'onglet `Commandes`➀ :
+
+- Séléctionnez sur le paneau `Catégorie`  l'entrée `Standard Fonctions`➁
+- Sélectionnez dans le paneau `Commandes` le script `AlgoSudoc`➂
 - Glissez déposez le script séléctioné sur l'une des barres de menu de winIBW
 
 ## Utilisation
