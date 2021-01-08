@@ -2,7 +2,7 @@
 
 # WinIBW AlgoSudoc
 
-![Build](https://github.com/eonm-abes/winibw-algo-sudoc/workflows/Node.js%20CI/badge.svg)
+![Build](https://github.com/eonm-abes/winibw-algo-sudoc/workflows/Build/badge.svg)
 [![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20Lastest%20Build-AlgoSudoc.js-yellow)](https://github.com/eonm-abes/winibw-algo-sudoc/releases/latest/download/Algo_sudoc.js)
 
 
