@@ -3,6 +3,7 @@
 # WinIBW AlgoThèses
 
 ![Build](https://github.com/eonm-abes/winibw-algo-theses/workflows/Build/badge.svg)
+![doc build](https://github.com/eonm-abes/winibw-algo-theses/workflows/doc%20build/badge.svg)
 [![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20lastest%20build-AlgoTheses.js-yellow)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest/download/Algo_theses.js)
 [![GitHub release](https://img.shields.io/github/release/eonm-abes/winibw-algo-theses.svg)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest)
 [![Contribution Welcome](https://img.shields.io/badge/contribution-welcome-green.svg)](https://github.com/eonm-abes/winibw-algo-theses/pulls)
