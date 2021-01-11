@@ -77,4 +77,4 @@ Développement :
 
 ---
 
-<span id="f1">1</span> Si vous souhaitez conserver un dossier `scripts` propre qui ne contient que les scripts fournis par OCLC et par l'ABES, vous pouvez lier fichier Algo_theses.js au lieu de le copier. [↩](#a1)
+<sup><span id="f1">1</span> Si vous souhaitez conserver un dossier `scripts` propre qui ne contient que les scripts fournis par OCLC et par l'ABES, vous pouvez lier fichier Algo_theses.js au lieu de le copier. [↩](#a1)</sup>
