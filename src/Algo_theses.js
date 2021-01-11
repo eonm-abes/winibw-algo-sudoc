@@ -21,7 +21,7 @@ function AlgoTheses() {
       winIBWMessageFormat.notification
     );
 
-    application.shellExecute(url, 5, "open", "");
+    application.shellExecute(`${url}&origin=winibw`, 5, "open", "");
   } else {
     application.activeWindow.showMessage(
       `Impossible de récupérer le rapport d'AlgoThèses depuis cet écran`,
