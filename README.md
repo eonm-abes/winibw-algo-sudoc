@@ -19,7 +19,7 @@ Ce script permet de récuperer grâce à [AlgoThèses](http://documentation.abes
 1- [Téléchargez la dernière version d'AlgoThèses](https://github.com/eonm-abes/winibw-algo-theses/releases/latest/download/Algo_theses.js)
 
 
-2- Le fichier `Algo_theses.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\chrome\ibw\scripts\`.<sup id="a1">[1](#f1)</sup> 
+2- Le fichier `Algo_theses.js` doit être copié dans le dossier : `C:\oclcpica\WinIBW30\scripts\`.<sup id="a1">[1](#f1)</sup> 
 
 3- La ligne suivante doit être rajoutée au fichier `C:\oclcpica\WinIBW30\defaults\pref\setup.js` (à la suite des lignes contenant `ibw.standardScripts.script.XX`) :
 
