@@ -53,7 +53,7 @@ Dans l'onglet `Commandes`➀ :
 
 ## Utilisation
 
-Le script peut être utilisé depuis une notice ou une liste de notices. Lorsque le script est utilisé sur une liste de résultats seule la notice sélectionnée est analysée par AlgoTheses.
+Le script peut être utilisé depuis une notice ou une liste de résultats.
 
 ## Développement
 
