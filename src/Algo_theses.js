@@ -17,16 +17,16 @@ export function AlgoTheses() {
   // on enlève le premier résultat qui n'est pas un PPN
   screen_results.shift();
 
-  ppns = screen_results.map((result) => {
+  let ppns = screen_results.map((result) => {
       return result.substr(0, 9)
   })
 
   ppns = (ppns.length) ? ppns : [application.activeWindow.getVariable("P3GPP")]
 
   if (ppns) {
-    let urls = urlBuilder("ppn", ppns);
+    let urls = __urlBuilder("ppn", ppns);
 
-    urls.forEach((url) => get_repport(url))
+    urls.forEach((url) => __get_report(url))
   } else {
     application.activeWindow.showMessage(
       `Impossible de récupérer le rapport d'AlgoThèses depuis cet écran`,
@@ -35,24 +35,24 @@ export function AlgoTheses() {
   }
 }
 
-function get_repport(url) {
+function __get_report(url) {
   application.activeWindow.showMessage(
     `Récupération du rapport d'AlgoThèses depuis : ${url}`,
-    winIBWMessageFormat.notification
+    winIBWMessageFormat.notification,
   );
 
   application.shellExecute(`${url}&origin=winibw`, 5, "open", "");
 }
 
-function urlBuilder(param_name, param_value) {
+function __urlBuilder(param_name, param_value) {
   let params = [].concat(param_value || []);
 
-  return chunk(params, chunk_size).map((chunk) => {
+  return __chunk(params, chunk_size).map((chunk) => {
     return `${algo_theses_base_url}?${param_name}=${chunk.join(",")}`
   })
 }
 
-function chunk(input, chunk_size) {
+function __chunk(input, chunk_size) {
   return Array.from({ length: Math.ceil(input.length / chunk_size) }, (v, i) =>
     input.slice(i * chunk_size, i * chunk_size + chunk_size),
   );
