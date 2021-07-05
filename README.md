@@ -7,6 +7,7 @@
 [![Latest Build](https://img.shields.io/badge/%F0%9F%93%A6%20lastest%20build-AlgoTheses.js-yellow)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest/download/Algo_theses.js)
 [![GitHub release](https://img.shields.io/github/release/eonm-abes/winibw-algo-theses.svg)](https://github.com/eonm-abes/winibw-algo-theses/releases/latest)
 [![Contribution Welcome](https://img.shields.io/badge/contribution-welcome-green.svg)](https://github.com/eonm-abes/winibw-algo-theses/pulls)
+[![license](https://img.shields.io/badge/license-CeCILL%202.1-blue.svg)](https://cecill.info/licences/Licence_CeCILL_V2.1-en.txt)
 
 </div>
 
