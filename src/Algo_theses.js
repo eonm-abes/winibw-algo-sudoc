@@ -11,24 +11,22 @@ const winIBWMessageFormat = {
   notification: 3,
 };
 
-function AlgoTheses() {
+export function AlgoTheses() {
   let screen_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
-  let ppns = [];
+  
+  // on enlève le premier résultat qui n'est pas un PPN
+  screen_results.shift();
 
-  for (let i in screen_results) {
-    if (i > 0) {
-      ppns.push(screen_results[i].substr(0, 9));
-    }
-  }
+  let ppns = screen_results.map((result) => {
+      return result.substr(0, 9)
+  })
 
   ppns = (ppns.length) ? ppns : [application.activeWindow.getVariable("P3GPP")]
 
   if (ppns) {
-    let urls = urlBuilder("ppn", ppns);
-    
-    for (let index in urls) {
-      get_repport(urls[index])
-    }
+    let urls = __urlBuilder("ppn", ppns);
+
+    urls.forEach((url) => __get_report(url))
   } else {
     application.activeWindow.showMessage(
       `Impossible de récupérer le rapport d'AlgoThèses depuis cet écran`,
@@ -37,35 +35,25 @@ function AlgoTheses() {
   }
 }
 
-function get_repport(url) {
+function __get_report(url) {
   application.activeWindow.showMessage(
     `Récupération du rapport d'AlgoThèses depuis : ${url}`,
-    winIBWMessageFormat.notification
+    winIBWMessageFormat.notification,
   );
 
   application.shellExecute(`${url}&origin=winibw`, 5, "open", "");
 }
 
-function urlBuilder(param_name, param_value) {
+function __urlBuilder(param_name, param_value) {
   let params = [].concat(param_value || []);
-  let urls = []
 
-  let chunks = chunk(params, chunk_size)
-  
-  for (var i = 0; i < chunks.length; i++) {
-    urls.push(`${algo_theses_base_url}?${param_name}=${chunks[i].join(",")}`)
-  }
-
-  return urls;
+  return __chunk(params, chunk_size).map((chunk) => {
+    return `${algo_theses_base_url}?${param_name}=${chunk.join(",")}`
+  })
 }
 
-function chunk(input, chunk_size) {
-  let chunks = [];
-
-  for (let i = 0, j = input.length; i < j; i += chunk_size) {
-    let temparray = input.slice(i, i + chunk_size);
-    chunks.push(temparray)
-  }
-
-  return chunks
+function __chunk(input, chunk_size) {
+  return Array.from({ length: Math.ceil(input.length / chunk_size) }, (v, i) =>
+    input.slice(i * chunk_size, i * chunk_size + chunk_size),
+  );
 }
