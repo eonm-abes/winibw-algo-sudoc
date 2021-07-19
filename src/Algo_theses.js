@@ -11,7 +11,7 @@ const winIBWMessageFormat = {
   notification: 3,
 };
 
-export function AlgoTheses() {
+function AlgoTheses() {
   let screen_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
   
   // on enlève le premier résultat qui n'est pas un PPN
@@ -21,7 +21,9 @@ export function AlgoTheses() {
       return result.substr(0, 9)
   })
 
-  ppns = (ppns.length) ? ppns : [application.activeWindow.getVariable("P3GPP")]
+  let active_ppn = application.activeWindow.getVariable("P3GPP");
+
+  ppns = ppns.length ? ppns : (active_ppn ? [active_ppn] : null);
 
   if (ppns) {
     let urls = __urlBuilder("ppn", ppns);
