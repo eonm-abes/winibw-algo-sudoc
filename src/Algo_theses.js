@@ -11,7 +11,7 @@ const winIBWMessageFormat = {
   notification: 3,
 };
 
-function AlgoTheses() {
+export function AlgoTheses() {
   let screen_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
   
   // on enlève le premier résultat qui n'est pas un PPN
