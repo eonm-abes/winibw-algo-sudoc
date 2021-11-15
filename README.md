@@ -38,7 +38,7 @@ Le script est à présent installé, WinIBW doit être redémarré pour que l'in
 
 </div>
 
-Depuis la barre de menu : `Options` ↪ `Personnaliser` (Ctrl+Shift+P)
+Depuis la barre de menu : `Options` ↪ `Personnaliser` (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 
 <div align="center">
 
