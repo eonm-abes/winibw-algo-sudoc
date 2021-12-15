@@ -42,7 +42,7 @@ function _includes(input, search_value) {
 // le script ne peut être activé que pour une liste de résultats, ou un résultat dont le type commence par Aa ou Oa
 function _should_mount() {
   return (
-    _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").splice(0, 2)) ||
+    _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").slice(0, 2)) ||
     _includes(allowed_screens, application.activeWindow.caption || "")
   );
 }
