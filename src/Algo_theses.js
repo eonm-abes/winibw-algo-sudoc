@@ -53,7 +53,7 @@ function _get_ppn() {
 }
 
 // récupère les PPNs à partir d'une liste de résultats
-// seuls les ppn de type commençant par Aa et Oa sont récupérés
+// seuls les ppn dont le type commence par Aa et Oa sont récupérés
 function _collect_ppn() {
   let list_of_ppns = [];
   let number_of_ppn = Math.min(max_number_of_ppn, application.activeWindow.getVariable("P3GSZ"));
