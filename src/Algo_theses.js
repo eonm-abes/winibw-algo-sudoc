@@ -1,12 +1,9 @@
-// description: Ce script permet de récuperer avec AlgoTheses les rapports de chargement de données de Theses.fr depuis WinIBW.
-// author : Mathis EON
-// email: eon@abes.fr
-
 const algo_theses_base_url = "https://www.theses.fr/AlgoSudoc";
-const chunk_size = 200;
 const max_number_of_ppn = 200;
+const chunk_size = 200;
 
-const allowed_doc_types = ["Aax", "Oax", "Aa", "Oa"];
+// le matching n'est réalisé que sur les deux premiers caractères du materialCode, les Aax et Oax sont donc couverts.
+const allowed_doc_types = ["Aa", "Oa"];
 const allowed_screens = ["SU Catalogue Affichage en liste"];
 
 const winIBWMessageFormat = {
@@ -42,10 +39,10 @@ function _includes(input, search_value) {
   }
 }
 
-// le script ne peut être activé que pour une liste de résultats, ou un résultat de type Aa, Aax ou Oa, Oax
+// le script ne peut être activé que pour une liste de résultats, ou un résultat de type commençant par Aa ou Oa
 function _should_mount() {
   return (
-    _includes(allowed_doc_types, application.activeWindow.docType)  ||
+    _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").splice(0,2))  ||
     _includes(allowed_screens, application.activeWindow.caption || "")
   );
 }
@@ -56,8 +53,7 @@ function _get_ppn() {
 }
 
 // Récupère les PPNs à partir d'une liste de résultats
-// Les PPNs sont récupérés à l'envers pour éviter le bug de la 16e notice
-// Seuls les ppn de type Aax et Oax sont récupérés
+// Seuls les ppn de type commençant par Aa et Oa sont récupérés
 function _collect_ppn() {
   let list_of_ppns = [];
   let number_of_ppn = Math.min(max_number_of_ppn, application.activeWindow.getVariable("P3GSZ"));
@@ -88,12 +84,12 @@ function _collect_ppn() {
   }
 
   // on slice pour ne pas excéder max_number_of_ppn car on récupère les résultats 16 par 16.
-  return list_of_ppns.slice(0, max_number_of_ppn);
+  return list_of_ppns.splice(0, max_number_of_ppn);
 }
 
 function _parse_search_result(input) {
   ppn = input.slice(0, 9);
-  doc_type = input.split(/\x1BE\x1BLMA[\*\+]?/)[1].split(" ")[0];
+  doc_type = input.split(/\x1BE\x1BLMA[\*\+]?/)[1].split(" ")[0].slice(0,2);
 
   return {
     ppn: ppn,
