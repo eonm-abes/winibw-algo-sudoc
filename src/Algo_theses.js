@@ -34,7 +34,7 @@ function AlgoTheses() {
 function _includes(input, search_value) {
   for (elem in input) {
     if (input[elem] === search_value) {
-     return true;
+      return true;
     }
   }
 }
@@ -42,7 +42,7 @@ function _includes(input, search_value) {
 // le script ne peut être activé que pour une liste de résultats, ou un résultat de type commençant par Aa ou Oa
 function _should_mount() {
   return (
-    _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").splice(0,2))  ||
+    _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").splice(0, 2)) ||
     _includes(allowed_screens, application.activeWindow.caption || "")
   );
 }
@@ -64,23 +64,23 @@ function _collect_ppn() {
 
   // L'itération doit commencer à 1 pour récupérer proprement le contenur de P3VKZ
   for (let i = 1; i < max; i += 16) {
-      application.activeWindow.command("af k " + i, false);
-  
-      search_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
-      // On retire le premier élément qui est vide
-      search_results.shift();
-  
-      search_results.forEach((search_result) => {
-        let result = _parse_search_result(search_result);
-  
-        if (_includes(allowed_doc_types, result.doc_type)) {
-          list_of_ppns.push(result.ppn);
-        }
-      });
+    application.activeWindow.command("af k " + i, false);
 
-      if (list_of_ppns.length >= max_number_of_ppn) {
-        break;
+    search_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
+    // On retire le premier élément qui est vide
+    search_results.shift();
+
+    search_results.forEach((search_result) => {
+      let result = _parse_search_result(search_result);
+
+      if (_includes(allowed_doc_types, result.doc_type)) {
+        list_of_ppns.push(result.ppn);
       }
+    });
+
+    if (list_of_ppns.length >= max_number_of_ppn) {
+      break;
+    }
   }
 
   // on slice pour ne pas excéder max_number_of_ppn car on récupère les résultats 16 par 16.
@@ -89,7 +89,7 @@ function _collect_ppn() {
 
 function _parse_search_result(input) {
   ppn = input.slice(0, 9);
-  doc_type = input.split(/\x1BE\x1BLMA[\*\+]?/)[1].split(" ")[0].slice(0,2);
+  doc_type = input.split(/\x1BE\x1BLMA[\*\+]?/)[1].split(" ")[0].slice(0, 2);
 
   return {
     ppn: ppn,
@@ -114,12 +114,12 @@ function __urlBuilder(param_name, param_value) {
   })
 }
 
-function __chunk(input, chunk_size) { 
+function __chunk(input, chunk_size) {
   let chunks = [];
-  for (i = 0,j = input.length; i < j; i += chunk_size) {
+  for (i = 0, j = input.length; i < j; i += chunk_size) {
     temporary = input.slice(i, i + chunk_size);
     chunks.push(temporary);
   }
-  
+
   return chunks;
 }
