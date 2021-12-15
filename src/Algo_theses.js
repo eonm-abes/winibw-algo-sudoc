@@ -39,7 +39,7 @@ function _includes(input, search_value) {
   }
 }
 
-// le script ne peut être activé que pour une liste de résultats, ou un résultat de type commençant par Aa ou Oa
+// le script ne peut être activé que pour une liste de résultats, ou un résultat dont le type commence par Aa ou Oa
 function _should_mount() {
   return (
     _includes(allowed_doc_types, application.activeWindow.materialCode.replace(/[*+]/, "").splice(0, 2)) ||
@@ -47,13 +47,13 @@ function _should_mount() {
   );
 }
 
-// Récupère un PPN à partir de la notice
+// récupère un PPN à partir de la notice
 function _get_ppn() {
   return [application.activeWindow.getVariable("P3GPP")];
 }
 
-// Récupère les PPNs à partir d'une liste de résultats
-// Seuls les ppn de type commençant par Aa et Oa sont récupérés
+// récupère les PPNs à partir d'une liste de résultats
+// seuls les ppn de type commençant par Aa et Oa sont récupérés
 function _collect_ppn() {
   let list_of_ppns = [];
   let number_of_ppn = Math.min(max_number_of_ppn, application.activeWindow.getVariable("P3GSZ"));
@@ -62,12 +62,12 @@ function _collect_ppn() {
 
   let max = number_of_ppn;
 
-  // L'itération doit commencer à 1 pour récupérer proprement le contenur de P3VKZ
+  // l'itération doit commencer à 1 pour récupérer proprement le contenur de P3VKZ
   for (let i = 1; i < max; i += 16) {
     application.activeWindow.command("af k " + i, false);
 
     search_results = application.activeWindow.getVariable("P3VKZ").split("\x1BH\x1BLPP");
-    // On retire le premier élément qui est vide
+    // retrait du premier élément qui est vide
     search_results.shift();
 
     search_results.forEach((search_result) => {
